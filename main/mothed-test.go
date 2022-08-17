@@ -18,13 +18,16 @@ func (p Point) Sub(q Point) Point {
 type Path []Point
 
 func (p Path) TranslateBy(offset Point, add bool) {
+	// po为func(p, offset Point) Point的函数值
 	var po func(p, offset Point) Point
 	if add {
+		// Point类型的Add方法值
 		po = Point.Add
 	} else {
 		po = Point.Sub
 	}
 	for i := range p {
+		// Point类型的Add或Sub方法表达式
 		p[i] = po(p[i], offset)
 	}
 }
