@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 // 方法和函数区别，方法有一个调度器，也即对象
-
+//1）方法值：隐式调用, struct实例获取方法对象
+//2)  方法表达式：显示调用, struct类型获取方法对象, 需要传递struct实例对象作为参数。
 type Point struct {
 	x, y float64
 }
